@@ -1,10 +1,10 @@
-🚀 Minikube 연습 가이드
+# 🚀 Minikube 연습 가이드
 로컬 환경에서 Docker 드라이버 기반 Minikube를 이용해
 ConfigMap, Secret, Deployment, Service를 구성하는 기본 실습입니다.
 
 ⸻
 
-1️⃣ 클러스터 시작
+## 1️⃣ 클러스터 시작
 
 minikube start --driver=docker
 
@@ -13,17 +13,13 @@ minikube status
 kubectl get nodes
 
 
-⸻
-
-2️⃣ 네임스페이스 생성
+## 2️⃣ 네임스페이스 생성
 
 kubectl create namespace kube-practice
 kubectl config set-context --current --namespace=kube-practice
 
 
-⸻
-
-3️⃣ ConfigMap 생성 (환경변수 설정)
+## 3️⃣ ConfigMap 생성 (환경변수 설정)
 
 📄 app-configmap.yaml
 
@@ -32,9 +28,7 @@ kubectl get configmap
 kubectl describe configmap nginx-config
 
 
-⸻
-
-4️⃣ Secret 생성 (민감정보 저장)
+## 4️⃣ Secret 생성 (민감정보 저장)
 
 📄 app-secret.yaml
 
@@ -44,9 +38,7 @@ kubectl get secrets
 kubectl describe secret app-secret
 
 
-⸻
-
-5️⃣ Deployment 생성 (Nginx + ConfigMap + Secret 사용)
+## 5️⃣ Deployment 생성 (Nginx + ConfigMap + Secret 사용)
 
 📄 nginx-deployment.yaml
 
@@ -55,9 +47,7 @@ kubectl get deployments
 kubectl get pods -o wide
 
 
-⸻
-
-6️⃣ Service 생성 (NodePort로 외부 접근)
+## 6️⃣ Service 생성 (NodePort로 외부 접근)
 
 📄 nginx-service.yaml
 
@@ -68,7 +58,7 @@ kubectl describe svc nginx-service
 접속 URL 확인:
 
 minikube service nginx-service --url -n kube-practice
-# 예: http://127.0.0.1:54901
+예: http://127.0.0.1:54901
 
 
 ⸻
