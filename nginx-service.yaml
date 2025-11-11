@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  type: NodePort # 노드의 포트를 통해 외부 접근 가능
+  selector:
+    app: nginx-sample
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80 # pod의 포트
+      nodePort: 30080   # 30000~32767 범위

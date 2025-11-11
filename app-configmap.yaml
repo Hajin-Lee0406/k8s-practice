@@ -1,0 +1,6 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-config
+data:
+  WELCOME_MSG: "안녕하세요! minikube 연습중입니다."
