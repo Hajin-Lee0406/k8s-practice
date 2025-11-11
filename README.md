@@ -1,10 +1,4 @@
-물론이죠 😊 아래는 위 과정을 GitHub README용 마크다운(Markdown) 으로 보기 좋게 정리한 버전입니다.
-복사해서 바로 README.md에 붙여넣어도 잘 렌더링됩니다.
-
-⸻
-
 🚀 Minikube 연습 가이드
-
 로컬 환경에서 Docker 드라이버 기반 Minikube를 이용해
 ConfigMap, Secret, Deployment, Service를 구성하는 기본 실습입니다.
 
